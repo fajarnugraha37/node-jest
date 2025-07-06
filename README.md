@@ -3,7 +3,7 @@
 <h1 align="center">
   <a href="https://github.com/fajarnugraha37/node-jest">
     <picture>
-      <img height="500" alt="GOUSS" src="https://raw.githubusercontent.com/fajarnugraha37/node-jest/refs/heads/main/assets/screenshot.pnghttps://raw.githubusercontent.com/fajarnugraha37/node-jest/refs/heads/main/assets/screenshot.png">
+      <img height="500" alt="Jest Coverage" src="https://raw.githubusercontent.com/fajarnugraha37/node-jest/refs/heads/main/assets/screenshot.png">
     </picture>
   </a>
 </h1>
