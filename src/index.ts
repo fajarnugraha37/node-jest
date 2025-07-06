@@ -1,4 +1,10 @@
-import { Calculator } from './calculator';
+import { UserService } from "./user-service";
 
-const calc = new Calculator();
-console.log('Sum of 2 + 3:', calc.add(2, 3));
+export async function main() {
+  const userService = new UserService();
+  const user = await userService.getFormattedUser("123");
+  console.log("Fetched user:", user);
+  await userService.createUser("456", "John Doe");
+}
+
+main().catch(console.error);
