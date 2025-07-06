@@ -1,6 +1,9 @@
 import { UserService } from "./user-service";
 
-main().catch(console.error);
+if (process.env.NODE_ENV !== "test") {
+  main().catch(console.error);
+}
+
 export async function main() {
   const userService = new UserService();
   const user = await userService.getFormattedUser("123");

@@ -94,20 +94,37 @@ describe('main', () => {
     expect(consoleLogSpy).toHaveBeenCalledWith('Server closed');
   });
 
-  // test('should not start server when NODE_ENV is test', () => {
-  //   // Arrange
-  //   const originalEnv = process.env.NODE_ENV;
-  //   process.env.NODE_ENV = 'test';
+  test('should not start server when NODE_ENV is test', () => {
+    // Arrange
+    const originalEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'test';
 
-  //   // Act
-  //   jest.isolateModules(() => {
-  //     require('./server');
-  //   });
+    // Act
+    jest.isolateModules(() => {
+      require('./server');
+    });
 
-  //   // Assert
-  //   expect(app.listen).not.toHaveBeenCalled();
+    // Assert
+    expect(app.listen).not.toHaveBeenCalled();
 
-  //   // Cleanup
-  //   process.env.NODE_ENV = originalEnv;
-  // });
+    // Cleanup
+    process.env.NODE_ENV = originalEnv;
+  });
+  
+  test('should start server when NODE_ENV is not test', () => {
+    // Arrange
+    const originalEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'dev';
+
+    // Act
+    jest.isolateModules(() => {
+      require('./server');
+    });
+
+    // Assert
+    expect(app.listen).toHaveBeenCalled();
+
+    // Cleanup
+    process.env.NODE_ENV = originalEnv;
+  });
 });
