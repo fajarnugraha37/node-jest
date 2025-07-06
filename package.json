@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon",
-    "build": "tsc",
+    "build": "rimraf ./dist && tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.{ts,tsx}",
@@ -27,6 +27,7 @@
     "globals": "^16.3.0",
     "jest": "^30.0.4",
     "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
