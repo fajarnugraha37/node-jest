@@ -8,7 +8,7 @@
   </a>
 </h1>
 <p align="center">
-  This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules, Jest and Supertest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests.
+  This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules, Jest and Supertest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests including mocking object or function.
 </p>
 
 ---
