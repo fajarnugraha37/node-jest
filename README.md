@@ -1,6 +1,17 @@
 ﻿# Setting Up a Node.js TypeScript Application with Jest for Unit Testing (ES Modules)
 
-This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules and Jest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests.
+<h1 align="center">
+  <a href="https://github.com/fajarnugraha37/node-jest">
+    <picture>
+      <img height="500" alt="GOUSS" src="https://raw.githubusercontent.com/fajarnugraha37/node-jest/refs/heads/main/assets/screenshot.pnghttps://raw.githubusercontent.com/fajarnugraha37/node-jest/refs/heads/main/assets/screenshot.png">
+    </picture>
+  </a>
+</h1>
+<p align="center">
+  This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules and Jest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests.
+</p>
+
+---
 
 ## Prerequisites
 
@@ -28,7 +39,7 @@ npm init -y
 
 ```json
 {
-  "type": "module",
+  "type": "module"
   // ... other fields
 }
 ```
@@ -68,6 +79,7 @@ npx tsc --init
 ```
 
 Explanation:
+
 - target: Specifies ECMAScript target version.
 - module: Uses ESNext for ES Modules.
 - moduleResolution: Set to "node" for Node.js module resolution.
@@ -102,19 +114,20 @@ Update the generated jest.config.js to support ES Modules:
 ```javascript
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
-  preset: 'ts-jest/presets/default-esm',
-  testEnvironment: 'node',
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
-  moduleFileExtensions: ['ts', 'js', 'json'],
+  preset: "ts-jest/presets/default-esm",
+  testEnvironment: "node",
+  roots: ["<rootDir>/src"],
+  testMatch: ["**/__tests__/**/*.ts", "**/?(*.)+(spec|test).ts"],
+  moduleFileExtensions: ["ts", "js", "json"],
   transform: {
-    '^.+\\.ts$': ['ts-jest', { useESM: true }]
+    "^.+\\.ts$": ["ts-jest", { useESM: true }],
   },
-  extensionsToTreatAsEsm: ['.ts']
+  extensionsToTreatAsEsm: [".ts"],
 };
 ```
 
 Explanation:
+
 - preset: Uses ts-jest/presets/default-esm for ES Modules support.
 - testEnvironment: Sets Node.js as the testing environment.
 - roots: Specifies the source directory.
@@ -157,6 +170,7 @@ Add scripts to package.json for building, running, and testing the application. 
 ```
 
 Explanation:
+
 - start: Runs the compiled JavaScript application.
 - dev: Runs the app in development mode with auto-restart.
 - build: Compiles TypeScript to JavaScript.
@@ -168,10 +182,10 @@ Explanation:
 1. Create the main application file: Create src/index.ts with a simple example using ES Modules syntax:
 
 ```typescript
-import { Calculator } from './calculator.js';
+import { Calculator } from "./calculator.js";
 
 const calc = new Calculator();
-console.log('Sum of 2 + 3:', calc.add(2, 3));
+console.log("Sum of 2 + 3:", calc.add(2, 3));
 ```
 
 2. Create a sample class: Create src/calculator.ts with a basic class:
@@ -193,22 +207,22 @@ export class Calculator {
 Create a test file for the Calculator class in src/calculator.test.ts:
 
 ```typescript
-import { Calculator } from './calculator.js';
+import { Calculator } from "./calculator.js";
 
-describe('Calculator', () => {
+describe("Calculator", () => {
   let calculator: Calculator;
 
   beforeEach(() => {
     calculator = new Calculator();
   });
 
-  test('should add two numbers correctly', () => {
+  test("should add two numbers correctly", () => {
     expect(calculator.add(2, 3)).toBe(5);
     expect(calculator.add(-1, 1)).toBe(0);
     expect(calculator.add(0, 0)).toBe(0);
   });
 
-  test('should subtract two numbers correctly', () => {
+  test("should subtract two numbers correctly", () => {
     expect(calculator.subtract(5, 3)).toBe(2);
     expect(calculator.subtract(3, 5)).toBe(-2);
     expect(calculator.subtract(0, 0)).toBe(0);
@@ -258,22 +272,19 @@ export default {
   env: {
     node: true,
     jest: true,
-    es2021: true
+    es2021: true,
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: './tsconfig.json',
-    sourceType: 'module'
+    project: "./tsconfig.json",
+    sourceType: "module",
   },
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  plugins: ["@typescript-eslint"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   rules: {
-    'no-console': 'warn',
-    '@typescript-eslint/explicit-module-boundary-types': 'off'
-  }
+    "no-console": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+  },
 };
 ```
 
