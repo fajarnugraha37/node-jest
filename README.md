@@ -1,4 +1,4 @@
-﻿# Setting Up a Node.js TypeScript Application with Jest for Unit Testing (ES Modules)
+﻿# Setting Up a Node.js TypeScript Application with Jest and Supertest for Unit Testing (ES Modules)
 
 <h1 align="center">
   <a href="https://github.com/fajarnugraha37/node-jest">
@@ -8,7 +8,7 @@
   </a>
 </h1>
 <p align="center">
-  This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules and Jest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests.
+  This guide provides a step-by-step process to create a Node.js application using TypeScript with ES Modules, Jest and Supertest for unit testing. By the end, you'll have a fully functional project with a sample application, proper configurations, and example tests.
 </p>
 
 ---
