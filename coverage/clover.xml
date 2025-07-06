@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1751796850932" clover="3.2.0">
-  <project timestamp="1751796850932" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="10" coveredconditionals="10" methods="14" coveredmethods="14" elements="69" coveredelements="69" complexity="0" loc="45" ncloc="45" packages="1" files="7" classes="7"/>
+<coverage generated="1751799086223" clover="3.2.0">
+  <project timestamp="1751799086223" name="All files">
+    <metrics statements="65" coveredstatements="65" conditionals="14" coveredconditionals="14" methods="19" coveredmethods="19" elements="98" coveredelements="98" complexity="0" loc="65" ncloc="65" packages="1" files="9" classes="9"/>
+    <file name="app-with-database.ts" path="C:\Users\nugra\workspace\project\node-jest\src\app-with-database.ts">
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="9" count="7" type="stmt"/>
+      <line num="10" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+    </file>
     <file name="app.ts" path="C:\Users\nugra\workspace\project\node-jest\src\app.ts">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -19,6 +34,17 @@
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="3" type="stmt"/>
       <line num="7" count="3" type="stmt"/>
+    </file>
+    <file name="database.ts" path="C:\Users\nugra\workspace\project\node-jest\src\database.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="15" count="6" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="47" count="6" type="stmt"/>
     </file>
     <file name="db.ts" path="C:\Users\nugra\workspace\project\node-jest\src\db.ts">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
